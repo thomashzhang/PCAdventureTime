@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PCAdventureTime"
         mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        MouseDown="WindowMainWindow_MouseDown"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <materialDesign:Card Padding="32"
+                             Margin="16">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">Material Design TextBlock</TextBlock>
+        </materialDesign:Card>
     </Grid>
 </Window>

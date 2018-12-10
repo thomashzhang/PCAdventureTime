@@ -24,5 +24,13 @@ namespace PCAdventureTime
         {
             InitializeComponent();
         }
+
+        private void WindowMainWindow_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+        }
     }
 }
