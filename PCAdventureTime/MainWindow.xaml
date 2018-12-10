@@ -10,9 +10,42 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         MouseDown="WindowMainWindow_MouseDown"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow"
+        Height="450"
+        AllowsTransparency="True"
+        Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="TitleButtons"
+                           Height="32" />
+            <RowDefinition x:Name="Content"
+                           Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="TitleBar"
+                              Width="*" />
+            <ColumnDefinition x:Name="Minimize"
+                              Width="32" />
+            <ColumnDefinition x:Name="Close"
+                              Width="32" />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="MinimizeButton"
+                Grid.Row="0"
+                Grid.Column="1"
+                Padding="0,0,0,8"
+                TextBlock.FontSize="20"
+                TextBlock.FontWeight="Bold"
+                Content="-" />
+        <Button x:Name="CloseButton"
+                Grid.Row="0"
+                Grid.Column="2"
+                Padding="0,0,0,8"
+                TextBlock.FontSize="20"
+                TextBlock.FontWeight="Bold"
+                Content="x" />
         <materialDesign:Card Padding="32"
+                             Grid.Row="1"
+                             Grid.ColumnSpan="3"
                              Margin="16">
             <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">Material Design TextBlock</TextBlock>
         </materialDesign:Card>
